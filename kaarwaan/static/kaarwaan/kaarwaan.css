@@ -1,0 +1,209 @@
+
+@font-face {
+    font-family: "merthy";
+    src: url("fonts/merthy/Merthy.otf"),
+         url("fonts/merthy/Merthy.ttf"),
+         url("fonts/merthy/Merthy.txt");
+}
+
+@font-face {
+    font-family: "calligraffitti";
+    src: url("fonts/calligraffitti/Calligraffitti-Regular.ttf");
+}
+
+@font-face {
+    font-family: "yellowtail";
+    src: url("fonts/yellowtail/Yellowtail-Regular.ttf");
+}
+
+body {
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+    background-color:   #53514e4d;
+    padding: 2.5px;
+}
+
+header {
+    background-color:   rgba(49, 200, 56, 0.41);
+    height: 170px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    border-radius: 25px;
+    min-width: 1170px;
+}
+
+
+header img {
+    width: 140px;
+    height: 140px;
+    margin: 17px 5%;
+    padding: 0px 5px;
+    border-radius: 100%;
+    float: left;
+}
+
+header h1 {
+    font-family: "yellowtail", "Times New Roman", Times, serif;
+    font-size:  300%;
+    font-weight: lighter;
+    color: #fc6809;
+    text-align: right;
+    padding: 30px 120px 0px 0px;
+    margin: 0px;
+    /*! text-decoration: underline; */
+}
+
+header h2 {
+    font-family: "calligraffitti";
+    font-size: 180%;
+    font-weight: normal;
+    text-align: right;
+    padding: 0px 50px;
+    margin: 0px;
+    color: #024156;
+}
+
+nav {
+    font-size: 110%;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: #27e61b99;
+    border-radius: 20px;
+    min-width: 1170px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 5px 0.5%;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0px 3%;
+    padding: 0px 6%;
+}
+
+.table {
+    display: table;
+    margin: 5px auto;
+    padding: 5px;
+    border-collapse:separate;
+    border-spacing:5px;
+}
+
+.tablerow {
+    display: table-row;
+    vertical-align: center;
+}
+
+#slideshow {
+    text-align: center;
+    margin: 0px auto;
+    display: table-cell;
+    background-color: #9092954d;
+    height: 370px;
+}
+
+#slideshow img {
+    height: 350px;
+    width: 550px;
+    margin: 10px auto;
+    border: groove whitesmoke 5px;
+}
+
+.content {
+    margin: 5px auto;   
+}
+
+#notice, #main, aside {
+    display: table-cell;
+    /*!margin: 0px 10px;*/
+    /*border: solid #cbcac9 5px;*/
+    padding: 5px 15px;
+    background-color: #fff636cc;
+    
+}
+
+#notice {
+    width: 25%;
+    border-radius: 30px 0px;
+}
+
+#main {
+    width: 50%;
+    border-radius: 30px;
+}
+
+aside {
+    width: 25%;
+    border-radius: 0px 30px;
+}
+
+footer {
+    text-align: center;
+    background-color: #27e61b99;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 5px auto 0px auto;
+    min-width: 1170px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin: 2px 10px 0px 10px;
+    padding: 0px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #016a01;
+}
+
+a.selected{
+    color: #0f3c0f;
+}
+
+a:hover{
+    color: #fff6cd;
+}
+
+.applet {
+    background-color: #9092954d;
+    min-height: 400px;
+    margin: 10px auto;
+}
+
+.applet h1 {
+    padding: 0px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #024156;
+}
+
+.applet h2 {
+    padding: 0px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #024156;
+}
+
+.applet p {
+    padding: 0px 15px;
+    color: #016a01;
+}
+
+.applet input {
+    margin: 2px 10px 15px 40px;
+    padding: 2px 20px;
+}
+
+.applet .button {
+    position: relative;
+    top: 50px;
+}
+
+span {
+    margin: 0% 10px;
+    padding: 3%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #024156;
+}

@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Kaarwaa.n</title>
+        <link type="text/css" rel="stylesheet" href="{% static 'kaarwaan/kaarwaan.css'%}">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="{% static 'kaarwaan/images/kaarwaan.jpg' %}" alt="Kaarwaan logo">
+            </div>
+            <h1>Kaarwaa.n...</h1>
+            <h2>a journey</h2>
+        </header>
+        <nav>
+            <ul>
+                <li> <a href="{% url 'kaarwaan:index' %}" class="selected">Home</a></li>
+                <li> <a href="{% url 'kaarwaan:data' %}">Data</a></li>
+                <li> <a href="gallery.html">Gallery</a></li>
+                <li> <a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="table">
+            <div class="tablerow">
+                <section id="slideshow">
+                    <img src="{% static 'kaarwaan/images/IMG_20170120_152258765.jpg' %}" alt="image of members with children" id="slide">
+                </section>
+            </div>
+            <div class="tablerow, content">
+                <section id="notice">
+                    <h1>Notice</h1>
+                    <ul>
+                        <li>Kaarwaa.n has joined the mil baanche program inititated by M.P. Government to help in co-curricular activities in schools.</li>
+                        <li>Independence day celebrated with the children from school at JEC lake and in orphanage.</li>
+                        <li>First year students willing to join kaarwaa.n can fill up the form at this link.</li>
+                    </ul>
+                </section>
+                
+                <section id="main">
+                    <article>
+                    <h1>About Kaarwaa.n</h1>
+                    <p>
+                        fshjhfmcnbcvjvnmnbcxmjdshn
+                    </p>
+                    </article>
+                </section>
+
+                <aside>
+                    <h1>Words of Wisdom</h1>
+                    <p>
+                        hdkjzcncc cnnn
+                        jffjdfbgdfmbdfmbsbj
+                    </p>
+                </aside>
+            </div>
+        </div>
+
+        <footer>
+                <a href="https://www.facebook.com/kaarwaanjec" target="_blank"><img src="{% static 'kaarwaan/img/facebook.png' %}" alt="facebook page" class="logo"></a>
+                <a href="mailto: kaarwaa.n16@gmail.com"><img src="{% static 'kaarwaan/img/mail.png' %}" alt="e-mail id" class="logo"></a>
+        </footer>
+
+    </body>
+</html>

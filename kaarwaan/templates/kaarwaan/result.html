@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+
+<html>
+    <head>
+            <meta charset="utf-8">
+            <title>Kaarwaa.n</title>
+            <link type="text/css" rel="stylesheet" href="{% static 'kaarwaan/kaarwaan.css'%}">
+    </head>
+
+    <body>
+        <header>
+            <div id="logo">
+                <img src="{% static 'kaarwaan/images/kaarwaan.jpg' %}" alt="Kaarwaan logo">
+            </div>
+            <h1>Kaarwaa.n...</h1>
+            <h2>a journey</h2>
+        </header>
+        <nav>
+            <ul>
+                <li> <a href="{% url 'kaarwaan:index' %}">Home</a></li>
+                <li> <a href="{% url 'kaarwaan:data' %}" class="selected">Data</a></li>
+                <li> <a href="gallery.html">Gallery</a></li>
+                <li> <a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="applet">
+            <h1>{{ school.school_name }}</h1>
+            <h1>{{ student.student_name }}</h1>
+            <h2>Result</h2>
+
+            {% if marks_list %}
+                <ul>
+                {% for marks in marks_list %}
+                    <li>{{ marks.marks }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No Results Found.</p>
+            {% endif %}
+        </div>
+
+        <footer>
+                <a href="https://www.facebook.com/kaarwaanjec" target="_blank"><img src="{% static 'kaarwaan/img/facebook.png' %}" alt="facebook page" class="logo"></a>
+                <a href="mailto: kaarwaa.n16@gmail.com"><img src="{% static 'kaarwaan/img/mail.png' %}" alt="e-mail id" class="logo"></a>
+        </footer>
+
+    </body>
+</html>

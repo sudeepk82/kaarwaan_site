@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+
+<html>
+    <head>
+                <meta charset="utf-8">
+                <title>Kaarwaa.n</title>
+                <link type="text/css" rel="stylesheet" href="{% static 'kaarwaan/kaarwaan.css'%}">
+                <script type="text/javascript">
+                    function validateNonEmpty (theForm, errorMessage) {
+                        if(!theForm["school"].value){
+                            errorMessage.innerHTML = "Please select a value before proceeding";
+                            document.getElementById("submit").disabled = true;
+                        } 
+                        else{
+                            errorMessage.innerHTML = "";
+                            document.getElementById("submit").disabled = false;
+                        }
+                    }
+                </script>
+    </head>    
+
+    <body>
+        <header>
+            <div id="logo">
+                <img src="{% static 'kaarwaan/images/kaarwaan.jpg' %}" alt="Kaarwaan logo">
+            </div>
+            <h1>Kaarwaa.n...</h1>
+            <h2>a journey</h2>
+        </header>
+        <nav>
+            <ul>
+                <li> <a href="{% url 'kaarwaan:index' %}">Home</a></li>
+                <li> <a href="{% url 'kaarwaan:data' %}" class="selected">Data</a></li>
+                <li> <a href="gallery.html">Gallery</a></li>
+                <li> <a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="applet">
+            <h1>Select a School</h1>
+            <span id="errormsg" style="visibility:hidden"></span>
+
+            {% if school_list %}
+                <form action="{% url 'kaarwaan:students'%}" method="post">
+                {% csrf_token %}
+                {% for school in school_list %}
+                    <input type="radio" name="school" id="school{{forloop.counter}}" value="{{ school.id }}" onclick="validateNonEmpty(this.form, document.getElementById('errormsg'));">
+                    <label for="school{{forloop.counter}}">{{ school.school_name }}</label></br>
+                {% endfor %}
+                <input type="submit" value="Submit" class="button" id="submit" onmouseover="validateNonEmpty(this.form, document.getElementById('errormsg')); document.getElementById('errormsg').style.visibility='visible';" onmouseout="getElementById('submit').disabled=false; document.getElementById('errormsg').style.visibility='hidden';">
+                </form>
+            {% else %}
+                <p>No schools found</p>
+            {% endif %}
+        </div>
+
+        <footer>
+                <a href="https://www.facebook.com/kaarwaanjec" target="_blank"><img src="{% static 'kaarwaan/img/facebook.png' %}" alt="facebook page" class="logo"></a>
+                <a href="mailto: kaarwaa.n16@gmail.com"><img src="{% static 'kaarwaan/img/mail.png' %}" alt="e-mail id" class="logo"></a>
+        </footer>
+
+    </body>
+</html>
